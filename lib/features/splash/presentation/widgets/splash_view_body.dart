@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gold_hub/core/constants/app_colors.dart';
-import 'package:gold_hub/core/utils/app_routers.dart';
+import 'package:golden_hub/core/constants/app_colors.dart';
+import 'package:golden_hub/core/utils/app_routers.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gold_hub/core/constants/app_colors.dart';
+import 'package:golden_hub/core/constants/app_colors.dart';
 
 class MainCard extends StatelessWidget {
   const MainCard({
@@ -8,11 +8,13 @@ class MainCard extends StatelessWidget {
     required this.color,
     required this.textColor,
     required this.icon,
+    required this.price,
   });
   final String text;
   final Color color;
   final Color textColor;
   final IconData icon;
+  final String price;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,13 +28,28 @@ class MainCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            text,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: textColor,
-              fontSize: 24,
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                text,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: textColor,
+                  fontSize: 24,
+                ),
+              ),
+              Text(
+                '$price \$',
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: 24,
+
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           Icon(icon, color: AppColors.blackColor, size: 48),
         ],

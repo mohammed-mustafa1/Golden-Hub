@@ -1,4 +1,4 @@
-import 'package:gold_hub/generated/l10n.dart';
+import 'package:golden_hub/generated/l10n.dart';
 
 class AppStrings {
   static const String goldHub = 'Gold Hub';
